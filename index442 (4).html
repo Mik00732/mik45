@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Магазин интересных товаров!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --main-bg: #535658;
+      --card-bg: #fffbe6;
+      --accent: #ff8800;
+      --menu-bg: #1a2639;
+      --menu-text: #fff3f1;
+      --shadow: 0 4px 16px rgba(60,60,75,.13);
+      --font: 'Segoe UI', Arial, sans-serif;
+
+    }
+    body {
+      font-family: var(--font);
+      background: var(--main-bg);
+      margin: 0;
+      padding: 0;
+      
+    }
+    nav {
+      position: fixed;
+      width: 100vw;
+      top: 0; left: 0;
+      background: var(--menu-bg);
+      color: var(--menu-text);
+      box-shadow: 0 2px 6px rgba(60,60,90,.12);
+      padding: 18px 0 12px 0;
+      font-size: 1.2rem;
+      text-align: center;
+      z-index: 120;
+
+    }
+    nav a {
+      color: var(--menu-text);
+      text-decoration: none;
+      margin: 0 18px;
+      transition: color .18s;
+
+    }
+    nav a:hover {
+      color: var(--accent);
+      
+    }
+    .page-header {
+      position: sticky;
+      top: 56px;
+      background: var(--main-bg);
+      padding: 20px 0 13px 0;
+      margin: 0;
+      font-size: 2.2rem;
+      font-weight: 700;
+      text-align: center;
+      color: #ffffff;
+      z-index: 10;
+      border-bottom: 2px solid #eee;
+    }
+    .center-wrap {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 44px;
+    }
+    .relative-block {
+      position: relative;
+      background: #ede7fc;
+      border-radius: 20px;
+      margin: 40px auto 0 auto;
+      width: 410px;
+      height: 120px;
+      box-shadow: var(--shadow);
+    }
+    .absolute-fun {
+      position: absolute;
+      top: -22px;
+      right: 14px;
+      background: var(--accent);
+      color: #fff;
+      padding: 14px 30px;
+      border-radius: 13px;
+      font-size: 1.05rem;
+      box-shadow: 0 2px 6px #ff0000cc;
+      animation: floating 2s infinite alternate;
+    }
+    @keyframes floating {
+      from { transform: translateY(0);}
+      to { transform: translateY(-12px);}
+    }
+    .goods-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 35px;
+      padding: 38px 30px;
+    }
+    .good-card {
+      background: var(--card-bg);
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      padding: 22px 17px 23px;
+      text-align: center;
+      transition: transform .22s, box-shadow .22s;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      position: relative;
+    }
+    .good-card:hover {
+      transform: scale(1.07) rotate(-2deg);
+      box-shadow: 0 12px 28px rgba(255, 255, 255, 0.18);
+      z-index: 2;
+      border: 2px solid var(--accent);
+    }
+    .good-img {
+      width: 122px;
+      height: 122px;
+      margin: 0 auto 13px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 3px solid #fff6;
+      box-shadow: 0 2px 13px #ffa77e66;
+      background: #ffffff;
+    }
+    .good-name {
+      font-weight: 600;
+      font-size: 1.18rem;
+      margin-bottom: 8px;
+    }
+    .good-price {
+      margin-top: auto;
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 1.17rem;
+    }
+    @media (max-width: 600px) {
+      .relative-block {
+        width: 90vw;
+      }
+      .goods-grid {
+        padding: 10px 2vw;
+        gap: 15px;
+      }
+      nav {
+        font-size: 1rem;
+        padding: 10px 0 6px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#">Главная</a>
+    <a href="#">Товары</a>
+    <a href="#">Контакты</a>
+    <a href="#">О нас</a>
+    <a href="#">Отзывы клиентов</a>
+  </nav>
+
+  <h1 class="page-header">Каталог  вещей</h1>
+
+  
+  <div class="relative-block">
+    <div class="absolute-fun">🌟 Интересно? Прокрутите вниз!</div>
+    <div style="padding: 40px 29px 0 29px; color:#482ead; font-size:1.08rem;">
+      Здесь мог бы быть ваш баннер или суперновость с анимацией!
+    </div>
+  </div>
+
+  <div class="center-wrap">
+    <div class="goods-grid">
+      <div class="good-card">
+        <img class="good-img" src="1f11cf6eadc8b4f95bb487bd8a921e30.jpg" alt=" ">
+        <div class="good-name">1200$</div>
+        <div></div>
+        <div class="good-price"></div>
+      </div>
+      <div class="good-card">
+        <img class="good-img" src="60c616881f99548308c7fdce6816fcc3.jpg" alt="">
+        <div class="good-name"></div>
+        <div>3000$</div>
+        <div class="good-price"></div>
+      </div>
+      <div class="good-card">
+        <img class="good-img" src="790fa5f6b1678f05b662035b1e1f755d.jpg" alt="">
+        <div class="good-name"></div>
+        <div>2000$</div>
+        <div class="good-price"></div>
+      </div>
+      <div class="good-card">
+        <img class="good-img" src="a7015f68ed7ec300e90b60d1f19b48d4.jpg" alt=" ">
+        <div class="good-name"></div>
+        <div>5000$</div>
+        <div class="good-price"></div>
+      </div>
+      <div class="good-card">
+        <img class="good-img" src="c3680166be47efc0211f60570a87a455.jpg" alt=" ">
+        <div class="good-name"></div>
+        <div>3600$</div>
+        <div class="good-price"></div>
+      </div>
+      <div class="good-card">
+        <img class="good-img" src="f8573a6ce6fc3b5c1bee0871fa6cc2ba.jpg" alt="">
+        <div class="good-name"></div>
+        <div>5200$</div>
+        <div class="good-price"></div>
+        <div>
+          
+         
+      </div>
+    </div>
+  </div>
+</body>
+</html>
